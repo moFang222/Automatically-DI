@@ -1,3 +1,5 @@
+//This is the theory of creating a RecurDependency function
+
 
 //如果一个依赖类1有构造器，不能立即将构造器的参数(parameters)即依赖类1的依赖类2（有多个）注入到依赖类1上，
 还要检查依赖2（有多个）有没有依赖类3（也许也有多个），然后再检查依赖类3有没有依赖类4。以此类推。。。。。。（依赖类不可能迭代无穷。）

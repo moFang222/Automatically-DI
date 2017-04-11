@@ -9,15 +9,11 @@ function RecurDependency($depcy)//$depcy是依赖类1，也就是第一个依赖
 		$depcynexts=$Constructors->getParameters();//取得构造器的参数,可能为数组。
 		foreach ($depcynexts as $depcys_next) {
 				if(!$depcys_next->getClass()->getConstructor())//该依赖类没有构造器时
-				{
-					
-					$add[]=$depcys_next->getClass()->newInstance();
-						
+				{	
+					$add[]=$depcys_next->getClass()->newInstance();	
 				}
 				else{
-				
 					$add[]=RecurDependency($depcys_next->getClass());
-				
 				}
 			}
 	}
@@ -46,11 +42,7 @@ function RecurDependency($depcy)//$depcy是依赖类1，也就是第一个依赖
 			}
 		}
 		return $instance;
-	// }
-	// else
-	// {
-	// 	return "You have to pass a argument.";
-	// }
+
 }
 
 

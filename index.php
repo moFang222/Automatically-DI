@@ -62,10 +62,6 @@ class Post{
 
 	public $a="a";
 
-	public function __construct(User $user)
-	{
-
-	}
 	public function __toString()
 	{
 		return 'people';
@@ -94,7 +90,11 @@ var_dump($post_with_constructor);
 
 //Once program have started,it will come out
 /**
-object(Post)#1 (4) { ["a"]=> string(1) "a" ["user"]=> object(User)#14 (2) { ["redis"]=> object(Redis)#16 (1) { ["name"]=> object(Name)#19 (1) { ["action"]=> object(Action)#21 (1) { ["test"]=> object(Test)#22 (0) { } } } } ["name"]=> object(Name)#15 (1) { ["action"]=> object(Action)#18 (1) { ["test"]=> object(Test)#23 (0) { } } } } ["redisc"]=> object(Redis)#12 (1) { ["name"]=> object(Name)#17 (1) { ["action"]=> object(Action)#25 (1) { ["test"]=> object(Test)#26 (0) { } } } } ["redisb"]=> object(Redis)#13 (1) { ["name"]=> object(Name)#20 (1) { ["action"]=> object(Action)#28 (1) { ["test"]=> object(Test)#29 (0) { } } } } }
+object(Post)#1 (4) { ["a"]=> string(1) "a"
+["user"]=> object(User)#14 (2) { ["redis"]=> object(Redis)#16 (1) { ["name"]=> object(Name)#19 (1) { ["action"]=> object(Action)#21 (1) { ["test"]=> object(Test)#22 (0) { } } } } 
+	["name"]=> object(Name)#15 (1) { ["action"]=> object(Action)#18 (1) { ["test"]=> object(Test)#23 (0) { } } } } 
+["redisc"]=> object(Redis)#12 (1) { ["name"]=> object(Name)#17 (1) { ["action"]=> object(Action)#25 (1) { ["test"]=> object(Test)#26 (0) { } } } }
+["redisb"]=> object(Redis)#13 (1) { ["name"]=> object(Name)#20 (1) { ["action"]=> object(Action)#28 (1) { ["test"]=> object(Test)#29 (0) { } } } } }
 */
 
 //And it's automatically inject .Done!!
